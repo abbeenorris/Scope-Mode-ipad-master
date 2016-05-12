@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qg8-9U-czk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qg8-9U-czk">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Project Name Controller-->
@@ -122,15 +122,13 @@
                                 <rect key="frame" x="474" y="380" width="76" height="30"/>
                                 <state key="normal" title="Live Action"/>
                                 <connections>
-                                    <action selector="liveBtn:" destination="bzZ-L3-x5x" eventType="touchUpInside" id="PXU-iC-9M0"/>
-                                    <segue destination="UOG-Oi-CJu" kind="show" id="OK3-rk-gy5"/>
+                                    <segue destination="UOG-Oi-CJu" kind="show" identifier="LiveAction" id="OK3-rk-gy5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISn-pC-f8o">
                                 <rect key="frame" x="478" y="445" width="69" height="30"/>
                                 <state key="normal" title="Animation"/>
                                 <connections>
-                                    <action selector="aniBtn:" destination="bzZ-L3-x5x" eventType="touchUpInside" id="WFj-Ps-KT0"/>
                                     <segue destination="33d-6i-43T" kind="show" id="7BU-hn-u7C"/>
                                 </connections>
                             </button>
@@ -138,8 +136,7 @@
                                 <rect key="frame" x="467" y="508" width="91" height="30"/>
                                 <state key="normal" title="Mixed Media "/>
                                 <connections>
-                                    <action selector="mixedBtn:" destination="bzZ-L3-x5x" eventType="touchUpInside" id="BSP-F6-t2o"/>
-                                    <segue destination="3bk-oe-exS" kind="show" id="4O0-4z-YrD"/>
+                                    <segue destination="3bk-oe-exS" kind="show" identifier="MixedMedia" id="4O0-4z-YrD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -216,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSW-Sd-Qo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3208" y="103"/>
+            <point key="canvasLocation" x="-3244" y="270"/>
         </scene>
         <!--Video Type Controller-->
         <scene sceneID="OW9-rW-XMu">
@@ -1752,8 +1749,8 @@
         <image name="Image" width="858" height="283"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GuJ-G8-OSj"/>
-        <segue reference="6CO-3D-XtQ"/>
+        <segue reference="OK3-rk-gy5"/>
+        <segue reference="7BU-hn-u7C"/>
         <segue reference="TFn-D4-PHP"/>
     </inferredMetricsTieBreakers>
 </document>
