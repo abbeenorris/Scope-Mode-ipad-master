@@ -10,41 +10,31 @@ class StyleController: UIViewController {
     var platformVar = String()
     var descriptionVar = String()
     
-    @IBAction func liveBtn(sender: AnyObject) {
-        
-        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            let DestViewController : LiveActionController = segue.destinationViewController as! LiveActionController
-            DestViewController.hiddenProjectVar = hiddenProjectVar
-            
-        }
-    }
-    @IBAction func aniBtn(sender: AnyObject) {
-        
-        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            let DestViewController2 : AnimationController = segue.destinationViewController as! AnimationController
-            DestViewController2.hiddenProjectVar = hiddenProjectVar
-        
-        }
-    }
-    
-    @IBAction func mixedBtn(sender: AnyObject) {
-        
-        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            let DestViewController3 : MixedMediaController = segue.destinationViewController as! MixedMediaController
-            DestViewController3.hiddenProjectVar = hiddenProjectVar
-            
-        }
-        
-        
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
-    
-    
-    
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "LiveAction" {
+            let destViewController = segue.destinationViewController as! LiveActionController
+            destViewController.hiddenProjectVar = hiddenProjectVar
+        }
+        
+        if segue.identifier == "LiveAction" {
+            let destViewController = segue.destinationViewController as! AnimationController
+            destViewController.hiddenProjectVar = hiddenProjectVar
+        }
+        
+        if segue.identifier == "LiveAction" {
+            let destViewController = segue.destinationViewController as! MixedMediaController
+            destViewController.hiddenProjectVar = hiddenProjectVar
+        }
+        
+
+        
+    }
+    
+    
 }
